@@ -1,14 +1,17 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import data from '../assets/data/alerts.json';
 
-export interface AlertDataInterface {
-  AlertId: number;
-  AlertTime: string;
+export interface DisplayAlertDataInterface {
   Severity: string;
   ClientIP: string;
-  ServerIP: string;
   Protocol: string;
   ClientCountry: string;
+}
+
+export interface AlertDataInterface extends DisplayAlertDataInterface {
+  AlertId: number;
+  AlertTime: string;
+  ServerIP: string;
 }
 
 export interface Filter {
@@ -23,7 +26,7 @@ export interface PropertyData {
 
 @Injectable()
 export class DataService {
-  dataKeys = ['Severity', 'ClientIP', 'Protocol', 'ClientCountry'];
+  dataKeys = ['Severity', 'ClientIP', 'Protocol', 'ClientCountry']; // Todo: figure out how to pull these from DisplayAlertDataInterface and eliminate static and duplicated text
   alerts: AlertDataInterface[] = data;
   filters: Filter[] = [];
 
