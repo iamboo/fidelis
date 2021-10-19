@@ -1,5 +1,15 @@
 # Fidelis
 
+## The Challenge
+
+[Code challenge by Fidelis Cybersecurity.](https://github.com/fidelisui/ui-challenge-short)
+
+## The Result
+
+This project is build and running on my server, [View the result](http://fidelis.iamboo.com/).
+
+## The Project
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
 ## Development server
