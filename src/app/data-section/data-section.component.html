@@ -1,0 +1,23 @@
+<div class="card mb-3 mt-3 rounded-3 shadow-sm">
+  <div class="card-header py-2">
+    <h4>{{ section | formatCase }}</h4>
+  </div>
+  <div class="card-body p-0">
+    <div class="list-group list-group-flush">
+      <a
+        href="#"
+        (click)="applyFilter($event, data.label)"
+        class="
+          list-group-item
+          d-flex
+          justify-content-between
+          align-items-center
+        "
+        *ngFor="let data of sectionData"
+      >
+        {{ data.label }}
+        <span class="badge badge-primary badge-pill">{{ data.count }}</span>
+      </a>
+    </div>
+  </div>
+</div>

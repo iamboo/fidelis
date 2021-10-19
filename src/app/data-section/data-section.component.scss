@@ -1,0 +1,15 @@
+@import '../../assets/css/mixins';
+
+:host {
+	display: block;
+	@include app-content;
+}
+
+h4 {
+	font-size: 1.1rem;
+	margin-bottom: 0rem;
+}
+
+.list-group-item:hover {
+	background-color: rgba(2, 135, 175, 0.05);
+}
